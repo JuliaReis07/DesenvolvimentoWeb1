@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        section{
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        button{
+            margin-top: 10px;
+        }
+
+        .circulo{
+            width: 80px;
+            height: 80px;
+            background-color: gray;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Exercícios de JavaScript</h1>
+
+    <!-- EXERCÍCIO 1 -->
+    <section>
+
+        <h2>1 - Mostrar e Ocultar Elemento</h2>
+
+        <p id="texto">
+            Olá! Eu apareço e desapareço 😎
+        </p>
+
+        <button onclick="mostrar()">Mostrar</button>
+        <button onclick="ocultar()">Ocultar</button>
+
+    </section>
+
+    <!-- EXERCÍCIO 2 -->
+    <section>
+
+        <h2>2 - Limpando Conteúdo</h2>
+
+        <input type="text" id="caixaTexto" placeholder="Digite algo">
+
+        <button onclick="mostrarTexto()">Mostrar</button>
+        <button onclick="limparTexto()">Limpar</button>
+
+        <div id="resultadoTexto"></div>
+
+    </section>
+
+    <!-- EXERCÍCIO 3 -->
+    <section>
+
+        <h2>3 - Pergunta com Múltiplas Opções</h2>
+
+        <p>Qual linguagem roda no navegador?</p>
+
+        <button onclick="errada()">Python</button>
+        <button onclick="correta()">JavaScript</button>
+        <button onclick="errada()">Java</button>
+
+        <p id="mensagem"></p>
+
+    </section>
+
+    <!-- EXERCÍCIO 4 -->
+    <section>
+
+        <h2>4 - Lista de Tarefas</h2>
+
+        <input type="text" id="tarefa" placeholder="Digite uma tarefa">
+
+        <button onclick="adicionarTarefa()">Adicionar</button>
+
+        <ul id="lista"></ul>
+
+    </section>
+
+    <!-- EXERCÍCIO 5 -->
+    <section>
+
+        <h2>5 - Conversor de Temperatura</h2>
+
+        <input type="number" id="celsius" placeholder="Digite em Celsius">
+
+        <button onclick="converter()">Converter</button>
+
+        <p id="resultadoTemperatura"></p>
+
+    </section>
+
+    <!-- EXERCÍCIO 6 -->
+    <section>
+
+        <h2>6 - Simulador de Semáforo</h2>
+
+        <div id="vermelho" class="circulo"></div>
+        <div id="amarelo" class="circulo"></div>
+        <div id="verde" class="circulo"></div>
+
+        <button onclick="acenderVermelho()">Vermelho</button>
+        <button onclick="acenderAmarelo()">Amarelo</button>
+        <button onclick="acenderVerde()">Verde</button>
+
+    </section>
+
+    <!-- EXERCÍCIO 7 -->
+    <section>
+
+        <h2>7 - Gerador de Tabuada</h2>
+
+        <input type="number" id="numero" placeholder="Digite um número">
+
+        <button onclick="gerarTabuada()">Gerar</button>
+
+        <div id="resultadoTabuada"></div>
+
+    </section>
+
+    <script>
+
+        // EXERCÍCIO 1
+
+        function mostrar(){
+            document.getElementById("texto").style.display = "block";
+        }
+
+        function ocultar(){
+            document.getElementById("texto").style.display = "none";
+        }
+
+
+        // EXERCÍCIO 2
+
+        function mostrarTexto(){
+
+            let texto = document.getElementById("caixaTexto").value;
+
+            document.getElementById("resultadoTexto").innerHTML = texto;
+        }
+
+        function limparTexto(){
+
+            document.getElementById("resultadoTexto").innerHTML = "";
+        }
+
+
+        // EXERCÍCIO 3
+
+        function correta(){
+
+            document.getElementById("mensagem").innerHTML = "Resposta correta! 🎉";
+        }
+
+        function errada(){
+
+            document.getElementById("mensagem").innerHTML = "Resposta errada 😢";
+        }
+
+
+        // EXERCÍCIO 4
+
+        function adicionarTarefa(){
+
+            let tarefa = document.getElementById("tarefa").value;
+
+            let item = document.createElement("li");
+
+            item.innerHTML = tarefa;
+
+            document.getElementById("lista").appendChild(item);
+
+            document.getElementById("tarefa").value = "";
+        }
+
+
+        // EXERCÍCIO 5
+
+        function converter(){
+
+            let celsius = document.getElementById("celsius").value;
+
+            let fahrenheit = (celsius * 9/5) + 32;
+
+            document.getElementById("resultadoTemperatura").innerHTML =
+            "Temperatura em Fahrenheit: " + fahrenheit;
+        }
+
+
+        // EXERCÍCIO 6
+
+        function apagarTodos(){
+
+            document.getElementById("vermelho").style.backgroundColor = "gray";
+
+            document.getElementById("amarelo").style.backgroundColor = "gray";
+
+            document.getElementById("verde").style.backgroundColor = "gray";
+        }
+
+        function acenderVermelho(){
+
+            apagarTodos();
+
+            document.getElementById("vermelho").style.backgroundColor = "red";
+        }
+
+        function acenderAmarelo(){
+
+            apagarTodos();
+
+            document.getElementById("amarelo").style.backgroundColor = "yellow";
+        }
+
+        function acenderVerde(){
+
+            apagarTodos();
+
+            document.getElementById("verde").style.backgroundColor = "green";
+        }
+
+
+        // EXERCÍCIO 7
+
+        function gerarTabuada(){
+
+            let numero = document.getElementById("numero").value;
+
+            let resultado = "";
+
+            for(let i = 1; i <= 10; i++){
+
+                resultado += numero + " x " + i + " = " + (numero * i) + "<br>";
+            }
+
+            document.getElementById("resultadoTabuada").innerHTML = resultado;
+        }
+
+    </script>
+
+</body>
+</html>
