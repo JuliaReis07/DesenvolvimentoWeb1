@@ -1,8 +1,4 @@
-/* ============================================================
-   Amazon Brasil – style.css
-   ============================================================ */
 
-/* ---------- Reset & Base ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -15,11 +11,7 @@ body {
 a { text-decoration: none; color: inherit; }
 img { display: block; max-width: 100%; }
 
-/* ============================================================
-   HEADER
-   ============================================================ */
 
-/* ---------- Top Bar ---------- */
 .header { background: #131921; color: #fff; position: sticky; top: 0; z-index: 100; }
 
 .header-top {
@@ -30,7 +22,6 @@ img { display: block; max-width: 100%; }
   min-height: 60px;
 }
 
-/* Logo */
 .logo {
   display: flex;
   flex-direction: column;
@@ -56,7 +47,6 @@ img { display: block; max-width: 100%; }
   margin-left: 2px;
 }
 
-/* Delivery */
 .header-delivery {
   display: flex;
   align-items: flex-end;
@@ -73,7 +63,6 @@ img { display: block; max-width: 100%; }
 .delivery-top { font-size: 11px; color: #ccc; }
 .delivery-bottom { font-size: 13px; font-weight: 700; }
 
-/* Search */
 .search-bar {
   display: flex;
   flex: 1;
@@ -110,7 +99,6 @@ img { display: block; max-width: 100%; }
 }
 .search-btn:hover { background: #f3a847; }
 
-/* Account / Returns / Cart */
 .header-account,
 .header-returns {
   display: flex;
@@ -158,7 +146,6 @@ img { display: block; max-width: 100%; }
 }
 .cart-label { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
 
-/* ---------- Nav Bar ---------- */
 .header-nav {
   background: #232f3e;
   display: flex;
@@ -179,9 +166,7 @@ img { display: block; max-width: 100%; }
 .header-nav a:hover { border-color: #fff; }
 .header-nav .nav-promo { color: #ff9900; }
 
-/* ============================================================
-   HERO BANNER
-   ============================================================ */
+
 .hero-banner {
   position: relative;
   overflow: hidden;
@@ -192,7 +177,6 @@ img { display: block; max-width: 100%; }
   justify-content: center;
 }
 .hero-banner::after {
-  /* gradient fade bottom to white */
   content: "";
   position: absolute;
   bottom: 0; left: 0; right: 0;
@@ -222,9 +206,7 @@ img { display: block; max-width: 100%; }
 .hero-arrow.left { left: 0; border-radius: 0 4px 4px 0; }
 .hero-arrow.right { right: 0; border-radius: 4px 0 0 4px; }
 
-/* ============================================================
-   CARDS ROW
-   ============================================================ */
+
 .page-content {
   max-width: 1500px;
   margin: 0 auto;
@@ -235,7 +217,7 @@ img { display: block; max-width: 100%; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  margin-top: -40px; /* overlap hero gradient */
+  margin-top: -40px; 
   padding: 0 14px;
   max-width: 1500px;
   margin-left: auto;
@@ -260,7 +242,6 @@ img { display: block; max-width: 100%; }
   line-height: 1.2;
 }
 
-/* 2×2 image grid inside cards */
 .card-grid-2x2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -289,7 +270,6 @@ img { display: block; max-width: 100%; }
   text-align: center;
 }
 
-/* See all link inside cards */
 .card-link {
   font-size: 13px;
   color: #007185;
@@ -298,7 +278,6 @@ img { display: block; max-width: 100%; }
 }
 .card-link:hover { color: #c7511f; text-decoration: underline; }
 
-/* Alexa card */
 .card-alexa p {
   font-size: 13px;
   color: #0f1111;
@@ -319,9 +298,6 @@ img { display: block; max-width: 100%; }
   cursor: pointer;
 }
 
-/* ============================================================
-   MAIS AMADOS POR CATEGORIA
-   ============================================================ */
 .category-section {
   max-width: 1500px;
   margin: 20px auto 0;
@@ -391,9 +367,7 @@ img { display: block; max-width: 100%; }
 }
 .cat-scroll-btn:hover { background: #f0f0f0; }
 
-/* ============================================================
-   FOOTER – "Voltar ao início"
-   ============================================================ */
+
 .back-to-top {
   background: #37475a;
   color: #fff;
@@ -405,7 +379,6 @@ img { display: block; max-width: 100%; }
 }
 .back-to-top:hover { background: #485769; }
 
-/* ---------- Footer Main ---------- */
 .footer-main {
   background: #232f3e;
   color: #fff;
@@ -441,7 +414,6 @@ img { display: block; max-width: 100%; }
 }
 .footer-col ul li a:hover { text-decoration: underline; }
 
-/* ---------- Footer Logo Bar ---------- */
 .footer-logo-bar {
   background: #232f3e;
   border-top: 1px solid #3a4553;
@@ -476,7 +448,6 @@ img { display: block; max-width: 100%; }
 .brazil-btn:hover { border-color: #fff; }
 .brazil-btn .flag { font-size: 18px; }
 
-/* ---------- Footer Bottom ---------- */
 .footer-bottom {
   background: #131921;
   padding: 14px;
